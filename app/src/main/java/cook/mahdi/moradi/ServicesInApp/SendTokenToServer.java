@@ -11,6 +11,7 @@ import androidx.annotation.Nullable;
 
 import java.io.IOException;
 
+import cook.mahdi.moradi.UtiInApp.GetConfig;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.OkHttpClient;
@@ -26,8 +27,8 @@ public class SendTokenToServer extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
 
         String token = intent.getStringExtra("token");
-        String baseUrl = "Your host";
-        String apiKey = "Your api key";
+        String baseUrl = GetConfig.getHOSTNAME();
+        String apiKey = GetConfig.getApiKey();
         //TODO :: do basic server thing
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()

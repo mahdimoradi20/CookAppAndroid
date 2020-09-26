@@ -31,6 +31,7 @@ import java.util.List;
 
 import cook.mahdi.moradi.DataBaseInApp.CookDB;
 import cook.mahdi.moradi.DataModels.Recipe;
+import cook.mahdi.moradi.UtiInApp.GetConfig;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.OkHttpClient;
@@ -83,8 +84,8 @@ public class HandleNewRecipe extends Service {
 
             notificationManager.notify(0 /* ID of notification */, notificationBuilder.build());
         }
-        String baseUrl = "Your host";
-        String apiKey = "Your apikey";
+        String baseUrl = GetConfig.getHOSTNAME();
+        String apiKey = GetConfig.getApiKey();
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()
                 .url(baseUrl + "/getNewFoods/" + apiKey).build();
