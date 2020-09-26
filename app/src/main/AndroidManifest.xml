@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cook.mahdi.moradi">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ActivitiesInApp.setting"></activity>
+        <activity android:name=".ActivitiesInApp.UpdateActivity" />
+        <activity android:name=".ActivitiesInApp.search_food" />
+        <activity android:name=".ActivitiesInApp.Weekly_routin_activity" />
+        <activity
+            android:name=".ActivitiesInApp.PlanningActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".ActivitiesInApp.FoodContent" />
+        <activity android:name=".ActivitiesInApp.FoodsActivity" />
+        <activity android:name=".ActivitiesInApp.FoodGroup" />
+        <activity android:name=".ActivitiesInApp.MainMenu" />
+        <activity android:name=".ActivitiesInApp.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".ServicesInApp.AppMessagingServerService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".UtiInApp.BroadCastEvent">
+            <intent-filter>
+                <action android:name="cook.mahdi.moradi.event.new" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".ServicesInApp.SaveTokenService" />
+        <service android:name=".ServicesInApp.SendTokenToServer" />
+        <service android:name=".ServicesInApp.HandleNewRecipe" />
+    </application>
+
+</manifest>

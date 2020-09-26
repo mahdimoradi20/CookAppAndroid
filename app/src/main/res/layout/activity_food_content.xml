@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ActivitiesInApp.FoodContent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#b2d1db"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:id="@+id/food_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/badr"
+                    android:textColor="#f00"
+                    android:textSize="45dp"
+                    android:textStyle="bold"
+                    tools:text="عنوان غذا اینجا می آید" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#1BD19F"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:id="@+id/food_ingredient"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/badr"
+                    android:textColor="#000"
+                    android:textSize="30dp"
+                    tools:text="مواد مورد نیاز اینجا می آید" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#FF0"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:id="@+id/food_rec"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/badr"
+                    android:textColor="#000"
+                    android:textSize="30dp"
+                    tools:text="طرز تیه اینجا می آید" />
+            </androidx.cardview.widget.CardView>
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/btnWannaCook"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="می خواهم این غذا را بپزم"
+                android:layout_marginBottom="20dp"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:onClick="WannaCookBtn"
+                android:fontFamily="@font/badr"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

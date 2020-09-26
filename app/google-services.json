@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "593654580791",
+    "firebase_url": "https://my-first-test-2ae08.firebaseio.com",
+    "project_id": "my-first-test-2ae08",
+    "storage_bucket": "my-first-test-2ae08.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:593654580791:android:ecf511eb592948235be1b2",
+        "android_client_info": {
+          "package_name": "com.mahdi.moradi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "593654580791-7ps5u1tkhpvniagne1h82c5k34guf43b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqk-UAD7IxCiNVKNkdqfF6DdhdSIwKCxU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "593654580791-7ps5u1tkhpvniagne1h82c5k34guf43b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:593654580791:android:eeeb30d653b5edf75be1b2",
+        "android_client_info": {
+          "package_name": "cook.mahdi.moradi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "593654580791-7ps5u1tkhpvniagne1h82c5k34guf43b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqk-UAD7IxCiNVKNkdqfF6DdhdSIwKCxU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "593654580791-7ps5u1tkhpvniagne1h82c5k34guf43b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
