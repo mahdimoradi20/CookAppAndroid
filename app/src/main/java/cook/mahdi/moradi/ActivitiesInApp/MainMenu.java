@@ -22,6 +22,7 @@ public class MainMenu extends AppCompatActivity {
         Button btnWeekly = findViewById(R.id.btn_weekly);
         Button btnWhatToCook = findViewById(R.id.btn_what_to_cook);
         Button btnSetting = findViewById(R.id.btn_setting);
+        Button btnChat = findViewById(R.id.btn_chat);
         btnMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,6 +48,13 @@ public class MainMenu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainMenu.this , setting.class);
+                startActivity(intent);
+            }
+        });
+        btnChat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainMenu.this , chatActivity.class);
                 startActivity(intent);
             }
         });
