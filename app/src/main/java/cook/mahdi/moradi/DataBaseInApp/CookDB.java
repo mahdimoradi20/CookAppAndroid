@@ -15,6 +15,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import co.intentservice.chatui.models.ChatMessage;
+import cook.mahdi.moradi.ApiHandlers.SendStaticToServer;
 import cook.mahdi.moradi.DataModels.Category;
 import cook.mahdi.moradi.DataModels.Recipe;
 import cook.mahdi.moradi.DataModels.RecipeWithID;
@@ -216,6 +218,7 @@ public class CookDB extends SQLiteOpenHelper{
                 Cursor c = sqliteDataBase.rawQuery(query, null);
                 c.moveToFirst();
                 c.close();
+                SendStaticToServer.sendStatic("addCountRecipes" , String.valueOf(recipes.get(i).getId()));
             }
         }
     }
@@ -242,6 +245,39 @@ public class CookDB extends SQLiteOpenHelper{
         }
         return new ArrayList<>();
     }
+
+    public void addMessage(ChatMessage chatMessage){
+        int type = 0;
+        if(chatMessage.getType() == ChatMessage.Type.SENT){
+            type = 1;
+        }
+        String query = "INSERT into Messages (text , type) values(\'" + chatMessage.getMessage() +"\' , " + type  + ")";
+        Cursor c = sqliteDataBase.rawQuery(query , null);
+        c.moveToFirst();
+        c.close();
+    }
+    public List<ChatMessage> getAllMessages(){
+        String query = "Select text , type , dateandtime from Messages";
+        Cursor c = sqliteDataBase.rawQuery(query , null);
+        if(c.getCount() > 0){
+            c.moveToFirst();
+            List<ChatMessage> messages = new ArrayList();
+            while (! c.isAfterLast()){
+                ChatMessage message;
+                if(c.getInt(1) == 0){
+                    message = new ChatMessage(c.getString(0) , c.getLong(2) , ChatMessage.Type.RECEIVED ) ;
+                }
+                else{
+                    message = new ChatMessage(c.getString(0) , c.getLong(2) , ChatMessage.Type.SENT ) ;
+                }
+                messages.add(message);
+                c.moveToNext();
+            }
+            return messages;
+        }
+        return new ArrayList<>();
+    }
+
     @Override
     public void onCreate(SQLiteDatabase db) {
         // No need to write the create table query.

@@ -29,7 +29,7 @@ public class SendTokenToServer extends Service {
         String token = intent.getStringExtra("token");
         String baseUrl = GetConfig.getHOSTNAME();
         String apiKey = GetConfig.getApiKey();
-        //TODO :: do basic server thing
+
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()
                 .url(baseUrl + "/saveUserToken/" + apiKey + "/" + token).build();
