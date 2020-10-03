@@ -43,9 +43,11 @@
             </intent-filter>
         </receiver>
 
+
         <service android:name=".ServicesInApp.SaveTokenService" />
         <service android:name=".ServicesInApp.SendTokenToServer" />
         <service android:name=".ServicesInApp.HandleNewRecipe" />
+        <service android:name=".ServicesInApp.HandleNewMessege" />
     </application>
 
 </manifest>

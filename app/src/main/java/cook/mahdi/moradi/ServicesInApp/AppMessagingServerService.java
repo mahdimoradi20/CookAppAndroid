@@ -24,11 +24,19 @@ public class AppMessagingServerService extends FirebaseMessagingService {
         // Check if message contains a data payload.
         if (remoteMessage.getData().size() > 0) {
             Log.d(TAG, "Message data payload: " + remoteMessage.getData());
-            Intent intent = new Intent(this , BroadCastEvent.class);
 
-            intent.putExtra("type" , 2);
-            intent.putExtra("content" , remoteMessage.getData().get("content"));
-            intent.putExtra("count" , remoteMessage.getData().get("count"));
+            Intent intent = new Intent(this, BroadCastEvent.class);
+            if(remoteMessage.getData().get("type").equals("message")) {
+                intent.putExtra("type" , 3);
+                intent.putExtra("messageid" , remoteMessage.getData().get("messageid"));
+            }
+            else{
+
+                intent.putExtra("type", 2);
+                intent.putExtra("content", remoteMessage.getData().get("content"));
+                intent.putExtra("count", remoteMessage.getData().get("count"));
+
+            }
             sendBroadcast(intent);
 
             if (/* Check if data needs to be processed by long running job */ true) {

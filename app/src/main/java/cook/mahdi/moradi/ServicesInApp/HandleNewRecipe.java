@@ -117,11 +117,9 @@ public class HandleNewRecipe extends Service {
                         recipes.add(recipe);
                     }
                     CookDB cookDB = new CookDB(HandleNewRecipe.this);
-                    Log.i(TAG, "onResponse: i am here to");
                     cookDB.saveNewRecipes(recipes);
                     cookDB.close();
                 } catch (JSONException e) {
-                    Log.i(TAG, "onResponse: i am here tovvvv" + e.toString());
                     e.printStackTrace();
                 }
 

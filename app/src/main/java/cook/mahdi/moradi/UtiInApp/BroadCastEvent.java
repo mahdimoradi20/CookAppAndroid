@@ -4,6 +4,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
+import cook.mahdi.moradi.ServicesInApp.HandleNewMessege;
 import cook.mahdi.moradi.ServicesInApp.HandleNewRecipe;
 import cook.mahdi.moradi.ServicesInApp.SaveTokenService;
 
@@ -19,9 +20,14 @@ public class BroadCastEvent extends BroadcastReceiver {
             context.startService(intent1);
         }
         else if(type == 2){
-            Intent intent1 = new Intent(context , HandleNewRecipe.class); //TODO : add a service to controll the new Recipe
+            Intent intent1 = new Intent(context , HandleNewRecipe.class);
             intent1.putExtra("foodName" , intent.getStringExtra("content"));
             intent1.putExtra("foodCount" , intent.getStringExtra("count"));
+            context.startService(intent1);
+        }
+        else if(type == 3){
+            Intent intent1 = new Intent(context , HandleNewMessege.class);
+            intent1.putExtra("msid" , intent.getStringExtra("messageid"));
             context.startService(intent1);
         }
     }
