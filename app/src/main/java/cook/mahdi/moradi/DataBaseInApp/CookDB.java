@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 import android.content.Context;
@@ -16,7 +15,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 import co.intentservice.chatui.models.ChatMessage;
-import cook.mahdi.moradi.ApiHandlers.SendStaticToServer;
+import cook.mahdi.moradi.ApiHandlers.SendDataToServer;
 import cook.mahdi.moradi.DataModels.Category;
 import cook.mahdi.moradi.DataModels.Recipe;
 import cook.mahdi.moradi.DataModels.RecipeWithID;
@@ -218,7 +217,7 @@ public class CookDB extends SQLiteOpenHelper{
                 Cursor c = sqliteDataBase.rawQuery(query, null);
                 c.moveToFirst();
                 c.close();
-                SendStaticToServer.sendStatic("addCountRecipes" , String.valueOf(recipes.get(i).getId()));
+                SendDataToServer.sendStatic("addCountRecipes" , String.valueOf(recipes.get(i).getId()));
             }
         }
     }

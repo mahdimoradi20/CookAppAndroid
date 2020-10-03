@@ -29,7 +29,6 @@ public class SaveTokenService extends Service {
         editor.commit();
         Intent intent1 = new Intent(this , SendTokenToServer.class);
         intent1.putExtra("token" , intent.getStringExtra("appToken"));
-        Log.e(TAG, "onStartCommand: i am here");
         startService(intent1);
         stopSelf();
         return super.onStartCommand(intent, flags, startId);

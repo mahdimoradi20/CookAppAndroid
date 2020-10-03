@@ -9,6 +9,7 @@ import java.util.List;
 
 import co.intentservice.chatui.ChatView;
 import co.intentservice.chatui.models.ChatMessage;
+import cook.mahdi.moradi.ApiHandlers.SendDataToServer;
 import cook.mahdi.moradi.DataBaseInApp.CookDB;
 import cook.mahdi.moradi.R;
 public class chatActivity extends AppCompatActivity {
@@ -25,6 +26,7 @@ public class chatActivity extends AppCompatActivity {
                 CookDB db = new CookDB(chatActivity.this);
                 db.addMessage(chatMessage);
                 db.close();
+                SendDataToServer.sendMessageToserver(chatMessage , chatActivity.this);
                 return true;
             }
         });
