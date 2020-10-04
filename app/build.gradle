@@ -40,5 +40,4 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:3.10.0'
     implementation 'com.google.firebase:firebase-analytics:17.5.0'
     implementation 'com.github.timigod:android-chat-ui:v0.1.4'
-    implementation 'com.sdsmdg.harjot:rotatingtext:1.0.2'
 }

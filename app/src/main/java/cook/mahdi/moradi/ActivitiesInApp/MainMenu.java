@@ -1,6 +1,7 @@
 package cook.mahdi.moradi.ActivitiesInApp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -18,11 +19,11 @@ public class MainMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
         checkTransFormToServer();
-        Button btnMenu = findViewById(R.id.btn_menu);
-        Button btnWeekly = findViewById(R.id.btn_weekly);
-        Button btnWhatToCook = findViewById(R.id.btn_what_to_cook);
-        Button btnSetting = findViewById(R.id.btn_setting);
-        Button btnChat = findViewById(R.id.btn_chat);
+        CardView btnMenu = findViewById(R.id.btn_menu);
+        CardView btnWeekly = findViewById(R.id.btn_weekly);
+        CardView btnWhatToCook = findViewById(R.id.btn_what_to_cook);
+        CardView btnSetting = findViewById(R.id.btn_setting);
+        CardView btnChat = findViewById(R.id.btn_chat);
         btnMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

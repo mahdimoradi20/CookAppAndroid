@@ -15,10 +15,5 @@
         android:text="Start Programm"
         tools:ignore="MissingConstraints" />
 
-    <com.sdsmdg.harjot.rotatingtext.RotatingTextWrapper
-        android:id="@+id/custom_switcher"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints" />
 
 </LinearLayout>
