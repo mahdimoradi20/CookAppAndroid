@@ -6,7 +6,21 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ActivitiesInApp.Weekly_routin_activity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#ff305d">
+        <TextView
 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#fff"
+            android:fontFamily="@font/vazribold"
+            android:textSize="20dp"
+            android:text = "برنامه هفتگی"/>
+
+    </RelativeLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"

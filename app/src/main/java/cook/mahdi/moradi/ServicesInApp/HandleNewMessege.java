@@ -53,7 +53,7 @@ public class HandleNewMessege extends Service {
 
                 @Override
                 public void onResponse(Call call, Response response) throws IOException {
-                    //TODO :: do something
+
                     String res = response.body().string();
                     String textBody = "";
                     String textTime = "";

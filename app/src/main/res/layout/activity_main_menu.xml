@@ -1,17 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivitiesInApp.MainMenu">
+    android:background="#f2e9eb"
+    tools:context=".ActivitiesInApp.MainMenu"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#ff305d">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#fff"
+            android:fontFamily="@font/vazribold"
+            android:textSize="20dp"
+            android:text = "برنامه آشپزی"/>
+        <ImageView
+            android:id="@+id/btnInfoDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/ic_contact_support"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
     <android.widget.LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:context=".ViewInApp.MainActivity">
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="6dp"
+            android:layout_margin="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
+            <com.smarteist.autoimageslider.SliderView
+                android:id="@+id/imageSlider"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                app:sliderAnimationDuration="600"
+                app:sliderAutoCycleDirection="back_and_forth"
+                app:sliderAutoCycleEnabled="true"
+                app:sliderIndicatorAnimationDuration="600"
+                app:sliderIndicatorGravity="center_horizontal|bottom"
+                app:sliderIndicatorMargin="15dp"
+                app:sliderIndicatorOrientation="horizontal"
+                app:sliderIndicatorPadding="3dp"
+                app:sliderIndicatorRadius="2dp"
+                app:sliderIndicatorSelectedColor="#5A5A5A"
+                app:sliderIndicatorUnselectedColor="#FFF"
+                app:sliderScrollTimeInSec="1"
+                app:sliderStartAutoCycle="true" />
+
+        </androidx.cardview.widget.CardView>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -23,44 +74,69 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:weightSum="2">
+
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_weekly"
                     android:layout_width="0dp"
-                    android:layout_height="150dp"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="8dp"
                     android:layout_margin="20px"
                     app:cardElevation="4dp"
-                    app:cardBackgroundColor="#34e8eb"
                     android:layout_weight="1" >
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="مشاهده برنامه هفتگی"
-                        android:textSize="25dp"
-                        android:textStyle="bold"
-                        android:textColor="#000"
-                        android:fontFamily="@font/badr"
-                        android:gravity="center|center_horizontal"/>
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:src="@drawable/weekly_routin_img"
+                            android:scaleType="fitCenter"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="مشاهده برنامه هفتگی"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:textColor="#000"
+                            android:layout_marginBottom="5dp"
+                            android:fontFamily="@font/vazribold"
+                            android:gravity="center|center_horizontal"/>
+                    </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_menu"
                     android:layout_width="0dp"
                     android:layout_margin="20px"
                     app:cardElevation="4dp"
-                    app:cardBackgroundColor="#9beb34"
-                    android:layout_height="150dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1" >
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="مشاهده غذا ها"
-                        android:textSize="25dp"
-                        android:textStyle="bold"
-                        android:textColor="#000"
-                        android:fontFamily="@font/badr"
-                        android:gravity="center|center_horizontal"/>
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:src="@drawable/foodlist_img"
+                            android:scaleType="fitCenter"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="مشاهده غذا ها"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:textColor="#000"
+                            android:layout_marginBottom="5dp"
+                            android:fontFamily="@font/vazribold"
+                            android:gravity="center|center_horizontal"/>
+                    </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -69,67 +145,108 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_chat"
                     android:layout_width="0dp"
-                    android:layout_height="150dp"
+                    app:cardCornerRadius="8dp"
+                    android:layout_height="wrap_content"
                     android:layout_margin="20px"
                     app:cardElevation="4dp"
-                    app:cardBackgroundColor="#e37766"
                     android:layout_weight="1" >
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="ارتباط با ما"
-                        android:textSize="25dp"
-                        android:textStyle="bold"
-                        android:textColor="#000"
-                        android:fontFamily="@font/badr"
-                        android:gravity="center|center_horizontal"/>
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:scaleType="fitCenter"
+
+                            android:src="@drawable/contact_us" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="ارتباط با ما"
+                            android:textSize="18dp"
+                            android:layout_marginBottom="5dp"
+                            android:textStyle="bold"
+                            android:textColor="#000"
+                            android:fontFamily="@font/vazribold"
+                            android:gravity="center|center_horizontal"/>
+                    </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_what_to_cook"
                     android:layout_width="0dp"
                     android:layout_margin="20px"
-                    app:cardBackgroundColor="#1ce645"
-                    android:layout_height="150dp"
+                    app:cardCornerRadius="8dp"
+                    android:layout_height="wrap_content"
                     app:cardElevation="4dp"
                     android:layout_weight="1" >
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="جستجو در غذا ها"
-                        android:textSize="25dp"
-                        android:textStyle="bold"
-                        android:textColor="#000"
-                        android:fontFamily="@font/badr"
-                        android:gravity="center|center_horizontal"/>
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:src="@drawable/search_img"
+                            android:scaleType="fitCenter"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="جستجو در غذا ها"
+                            android:layout_marginBottom="5dp"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:textColor="#000"
+                            android:fontFamily="@font/vazribold"
+                            android:gravity="center|center_horizontal"/>
+                    </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:weightSum="2">
+                android:layoutDirection="rtl"
+                android:weightSum="1">
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_setting"
                     android:layout_width="0dp"
-                    android:layout_margin="20px"
-                    android:layout_gravity="right"
-                    app:cardBackgroundColor="#1ce645"
-                    android:layout_height="150dp"
+                    android:layout_margin="20dp"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="8dp"
                     app:cardElevation="4dp"
                     android:layout_weight="1" >
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="تنظیمات"
-                        android:textSize="25dp"
-                        android:textStyle="bold"
-                        android:textColor="#000"
-                        android:fontFamily="@font/badr"
-                        android:gravity="center|center_horizontal"/>
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:src="@drawable/settings_img"
+                            android:scaleType="fitCenter"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="تنظیمات"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="5dp"
+                            android:textColor="#000"
+                            android:fontFamily="@font/vazribold"
+                            android:gravity="center|center_horizontal"/>
+                    </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
-        </LinearLayout>
 
+        </LinearLayout>
+        </ScrollView>
     </android.widget.LinearLayout>
-</ScrollView>
+</LinearLayout>

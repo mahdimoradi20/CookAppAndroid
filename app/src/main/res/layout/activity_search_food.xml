@@ -1,85 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ActivitiesInApp.search_food"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_margin="10dp"
-        android:text="در پایین مواد غذایی مورد نظر خود را انتخاب کرده و بر روی جستجو کلیک کنید:"
-        android:textColor="#000"
-        android:textSize="20dp"/>
-<androidx.cardview.widget.CardView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginLeft="10dp"
-    android:layout_marginRight="10dp"
-    app:cardBackgroundColor="#fc0">
-
-    <LinearLayout
+    android:orientation="vertical"
+    tools:context=".ActivitiesInApp.search_food">
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="?attr/actionBarSize"
+        android:background="#ff305d">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/vazribold"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:text="جستجو" />
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-            android:background="#cfc"
-            android:weightSum="5">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_margin="10dp"
+                android:text="در پایین مواد غذایی مورد نظر خود را انتخاب کرده و بر روی جستجو کلیک کنید:"
+                android:textColor="#000"
+                android:textSize="20dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:cardBackgroundColor="#fc0">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="#cfc"
+                        android:weightSum="5">
+
+                        <Button
+                            android:id="@+id/btn_add_to_search_list"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="@drawable/ic_add_black_24dp" />
+
+                        <EditText
+                            android:id="@+id/text_add_to_search_list"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="4"
+                            android:background="@drawable/back_edit"
+                            android:textSize="30dp" />
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rc_add_ingredients"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
             <Button
-                android:id="@+id/btn_add_to_search_list"
-                android:layout_width="0dp"
+                android:id="@+id/btn_search_foods"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:background="@drawable/ic_add_black_24dp" />
-
-            <EditText
-                android:id="@+id/text_add_to_search_list"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_weight="4"
-                android:background="@drawable/back_edit"
-                android:textSize="30dp" />
+                android:text="جستجو"
+                android:textColor="#000"
+                android:textSize="20dp" />
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rc_show_results"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
         </LinearLayout>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rc_add_ingredients"
-            android:layout_width="match_parent"
-
-            android:layout_height="match_parent" />
-    </LinearLayout>
-</androidx.cardview.widget.CardView>
-<Button
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="10dp"
-    android:layout_marginLeft="10dp"
-    android:layout_marginRight="10dp"
-    android:textSize="20dp"
-    android:textColor="#000"
-    android:id="@+id/btn_search_foods"
-    android:text="جستجو"/>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/rc_show_results"/>
+    </ScrollView>
 </LinearLayout>
-</ScrollView>

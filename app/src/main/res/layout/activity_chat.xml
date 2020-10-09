@@ -5,8 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:chatview="http://schemas.android.com/apk/res-auto"
-    tools:context=".ActivitiesInApp.chatActivity">
-
+    tools:context=".ActivitiesInApp.chatActivity"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#ff305d">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="#fff"
+        android:fontFamily="@font/vazribold"
+        android:textSize="20dp"
+        android:text = "پشتیبانی"/>
+    </RelativeLayout>
     <co.intentservice.chatui.ChatView
         android:id="@+id/chat_view"
         android:layout_width="match_parent"

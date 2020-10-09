@@ -10,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -95,7 +96,7 @@ public class PlanningActivity extends AppCompatActivity {
             //Toast.makeText(this , sp_day.getSelectedItem().toString() , Toast.LENGTH_LONG).show();
             CookDB cookDB = new CookDB(this);
             cookDB.update_weekly(day_of_week_persian , id , textDatePersian.getText().toString() , DescriptionFood.getText().toString());
-            ScrollView sc = findViewById(R.id.sc_lay);
+            LinearLayout sc = findViewById(R.id.sc_lay);
             Snackbar.make(sc , cookDB.getOneRecipeWithID(id).getName() +  " به روز " + day_of_week_persian +  " اضافه شد" , Snackbar.LENGTH_SHORT ).show();
             cookDB.close();
         }

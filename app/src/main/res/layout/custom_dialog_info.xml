@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f5a9a9">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:textColor="#fff"
+        android:text="این برنامه در حال تست می باشد. ممنون که از آن استفاده می کنید. لطفا نظرات و پیشنهادات خود را برای بهبود برنامه از طریق بخش ارتباط با ما در میان بگذارید. سپاس گذاریم"
+        android:fontFamily="@font/vazribold"
+        android:textSize="25dp"/>
+    <Button
+        android:id="@+id/dialog_info_ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:fontFamily="@font/vazribold"
+        android:textSize="20dp"
+        android:text="متوجه شدم"/>
+</LinearLayout>

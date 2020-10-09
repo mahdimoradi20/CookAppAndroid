@@ -64,7 +64,6 @@ public class chatActivity extends AppCompatActivity {
         public void onReceive(Context context, Intent intent) {
             chatView.clearMessages();
             getAndShowMesages();
-            Toast.makeText(chatActivity.this , "aaaa" , Toast.LENGTH_SHORT).show();
         }
     };
 }
