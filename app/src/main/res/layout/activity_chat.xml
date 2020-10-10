@@ -22,6 +22,7 @@
     </RelativeLayout>
     <co.intentservice.chatui.ChatView
         android:id="@+id/chat_view"
+        app:inputHint="پیام خود را اینجا بنویسید"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

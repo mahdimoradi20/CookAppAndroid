@@ -29,6 +29,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
+        android:layoutAnimation="@anim/layout_animation"
         />
 
 </LinearLayout>

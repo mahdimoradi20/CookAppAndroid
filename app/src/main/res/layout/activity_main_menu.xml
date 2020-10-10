@@ -37,7 +37,7 @@
         tools:context=".ViewInApp.MainActivity">
         <androidx.cardview.widget.CardView
             app:cardCornerRadius="6dp"
-            android:layout_margin="16dp"
+            android:layout_margin="12dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -66,7 +66,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40px"
+            android:layout_marginTop="5dp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -90,7 +90,7 @@
                         android:padding="5dp">
                         <ImageView
                             android:layout_width="match_parent"
-                            android:layout_height="150dp"
+                            android:layout_height="130dp"
                             android:src="@drawable/weekly_routin_img"
                             android:scaleType="fitCenter"/>
                         <TextView
@@ -120,7 +120,7 @@
                         android:padding="5dp">
                         <ImageView
                             android:layout_width="match_parent"
-                            android:layout_height="150dp"
+                            android:layout_height="130dp"
                             android:src="@drawable/foodlist_img"
                             android:scaleType="fitCenter"/>
                         <TextView
@@ -157,7 +157,7 @@
                         android:padding="5dp">
                         <ImageView
                             android:layout_width="match_parent"
-                            android:layout_height="150dp"
+                            android:layout_height="130dp"
                             android:scaleType="fitCenter"
 
                             android:src="@drawable/contact_us" />
@@ -189,7 +189,7 @@
                         android:padding="5dp">
                         <ImageView
                             android:layout_width="match_parent"
-                            android:layout_height="150dp"
+                            android:layout_height="130dp"
                             android:src="@drawable/search_img"
                             android:scaleType="fitCenter"/>
                         <TextView
@@ -228,7 +228,7 @@
                         android:padding="5dp">
                         <ImageView
                             android:layout_width="match_parent"
-                            android:layout_height="150dp"
+                            android:layout_height="130dp"
                             android:src="@drawable/settings_img"
                             android:scaleType="fitCenter"/>
                         <TextView

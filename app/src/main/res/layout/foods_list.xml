@@ -18,8 +18,8 @@
             tools:text="نام غذا اینجا می آید"
             android:background="#cbf"
             android:gravity="center"
-            android:fontFamily="@font/badr"
-            android:textSize="30dp"
+            android:fontFamily="@font/vazribold"
+            android:textSize="25dp"
             android:textColor="#000"
             android:textStyle="bold"
             android:textAlignment="center" />

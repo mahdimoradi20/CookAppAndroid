@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="#ff2664"
     tools:context=".ActivitiesInApp.MainActivity">
-
-    <Button
-        android:id="@+id/btnStart"
+    <ImageView
+        android:id="@+id/imgspash"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="startBtn"
-        android:text="Start Programm"
-        tools:ignore="MissingConstraints" />
-
-
-</LinearLayout>
+        android:src="@drawable/ic_contact_support"
+        android:layout_centerInParent="true"
+        />
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgspash"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

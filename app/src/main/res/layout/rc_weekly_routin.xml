@@ -2,69 +2,70 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/weekly_text_day_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/vazribold"
+        android:scrollHorizontally="true"
+        android:textColor="#000"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        tools:text="روز هفته" />
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardBackgroundColor="#00F00F"
+        android:elevation="5dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="5dp">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="7">
-
-
-            <Button
-                android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:id="@+id/weekly_btn_delete"
-                android:fontFamily="@font/badr"
-                android:textColor="#000"
-                android:textSize="30dp"
-                android:background="@drawable/ic_delete_black_24dp"
-                android:textStyle="bold"
-                 />
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:id="@+id/weekly_btn_info"
-                android:fontFamily="@font/badr"
-                android:textColor="#000"
-                android:background="@drawable/ic_info_black_24dp"
-                android:textSize="30dp"
-                android:textStyle="bold"
-                />
-
+                android:layout_below="@+id/weekly_text_food_name"
+                android:orientation="horizontal">
+                <Button
+                    android:layout_width="25dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/weekly_btn_delete"
+                    android:textColor="#000"
+                    android:textSize="30dp"
+                    android:background="@drawable/ic_delete_black_24dp"
+                    android:textStyle="bold"
+                    />
+                <Button
+                    android:layout_width="25dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/weekly_btn_info"
+                    android:layout_below="@+id/weekly_text_food_name"
+                    android:textColor="#000"
+                    android:background="@drawable/ic_info_black_24dp"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    />
+            </LinearLayout>
             <TextView
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textAlignment="center"
                 android:layout_weight="3"
                 android:id="@+id/weekly_text_food_name"
                 android:scrollHorizontally="true"
-                android:fontFamily="@font/badr"
+                android:fontFamily="@font/vazribold"
                 android:textColor="#000"
-                android:textSize="30dp"
+                android:textSize="25dp"
                 android:textStyle="bold"
                 tools:text="نام عذا" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:id="@+id/weekly_text_day_name"
-                android:fontFamily="@font/badr"
-                android:textColor="#000"
-                android:textSize="30dp"
-                android:scrollHorizontally="true"
-                android:textStyle="bold"
-                tools:text="روز هفته" />
-        </LinearLayout>
+        </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
 </LinearLayout>

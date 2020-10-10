@@ -23,64 +23,16 @@
     </RelativeLayout>
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#f0ebdd">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:orientation="vertical">
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardBackgroundColor="#b2d1db"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginRight="10dp">
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardBackgroundColor="#1BD19F"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginRight="10dp">
-
-                <TextView
-                    android:id="@+id/food_ingredient"
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:fontFamily="@font/badr"
-                    android:textColor="#000"
-                    android:textSize="30dp"
-                    tools:text="مواد مورد نیاز اینجا می آید" />
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardBackgroundColor="#FF0"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginRight="10dp">
-
-                <TextView
-                    android:id="@+id/food_rec"
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:fontFamily="@font/badr"
-                    android:textColor="#000"
-                    android:textSize="30dp"
-                    tools:text="طرز تیه اینجا می آید" />
-            </androidx.cardview.widget.CardView>
             <Button
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
@@ -89,11 +41,63 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
                 android:text="می خواهم این غذا را بپزم"
-                android:layout_marginBottom="20dp"
-                android:textSize="25dp"
+                android:layout_marginBottom="10dp"
+                android:textSize="20dp"
                 android:textStyle="bold"
                 android:onClick="WannaCookBtn"
-                android:fontFamily="@font/badr"/>
+                android:fontFamily="@font/vazir"/>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="5dp"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:id="@+id/food_ingredient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/vazir"
+                    android:textColor="#000"
+                    android:textSize="20dp"
+                    tools:text="مواد مورد نیاز اینجا می آید" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="5dp"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:id="@+id/food_rec"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/vazir"
+                    android:textColor="#000"
+                    android:textSize="20dp"
+                    tools:text="طرز تیه اینجا می آید" />
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:fontFamily="@font/vazir"
+                android:textSize="18dp"
+                android:text="به این دستور پخت چه امتیازی میدهید؟"/>
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center"/>
         </LinearLayout>
     </ScrollView>
 

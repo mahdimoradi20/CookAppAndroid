@@ -11,6 +11,8 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.google.android.material.snackbar.Snackbar;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,21 +45,25 @@ public class search_food extends AppCompatActivity {
         searchFors = new ArrayList<>();
         searchAddAdapter = new SearchAddAdapter(searchFors , this);
         recAddIngredients.setAdapter(searchAddAdapter);
-        recAddIngredients.setLayoutManager( new LinearLayoutManager(this , LinearLayoutManager.VERTICAL , false));
+        recAddIngredients.setLayoutManager( new LinearLayoutManager(this , LinearLayoutManager.HORIZONTAL , false));
         results = new ArrayList<>();
         foodsListAdapter = new FoodsListAdapter(results , this);
         recShowResults.setAdapter(foodsListAdapter);
-        recShowResults.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL , false));
+        recShowResults.setLayoutManager(new LinearLayoutManager(this , RecyclerView.HORIZONTAL , true));
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (textAdd.getText().toString() != "") {
+                if (!textAdd.getText().toString().equals("")) {
                     SearchFor search = new SearchFor();
                     search.setName(textAdd.getText().toString());
                     searchFors.add(search);
                     searchAddAdapter.notifyDataSetChanged();
+
                     textAdd.setText("");
+                }else{
+                    Toast.makeText(search_food.this , "مقدار ورودی نمی تواند خالی باشد" , Toast.LENGTH_SHORT).show();
                 }
+
             }
         });
         btnSearch.setOnClickListener(new View.OnClickListener() {
@@ -70,7 +76,7 @@ public class search_food extends AppCompatActivity {
                     foodsListAdapter.notifyDataSetChanged();
                     cookDB.close();
                 }else{
-                    Toast.makeText(search_food.this , "opt an option!:)" , Toast.LENGTH_SHORT).show();
+                    Toast.makeText(search_food.this , "یک چیزی انتخاب کنید:)" , Toast.LENGTH_SHORT).show();
                 }
             }
         });
